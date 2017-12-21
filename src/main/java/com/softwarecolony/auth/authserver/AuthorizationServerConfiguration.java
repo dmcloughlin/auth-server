@@ -40,7 +40,7 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
         clients.inMemory()
                 .withClient("live-test")
                 .secret("bG12ZS10ZXN0") // We won't use this with our Angular app!
-                .authorizedGrantTypes("password")
+                .authorizedGrantTypes("password", "refresh_token")
                 .scopes("webapp")
                 .accessTokenValiditySeconds(3600);
     }
